@@ -478,3 +478,47 @@ const oldAndLoud = (person) => {
 };
 oldAndLoud(user);
 console.log(user);
+
+// Cat Combinator
+// 1. Mama cat
+// Define an object called cat1that contains the following properties:
+
+// name
+// breed
+// age (a number)
+// console.log the cat's age
+// console.log the cat's breed
+const cat1 = {
+  name: "Joe",
+  breed: "Mog",
+  age: 19,
+};
+console.log(cat1.age);
+console.log(cat1.breed);
+
+// 2. Papa cat
+// Define an object called cat2that also contains the properties:
+
+// name
+// breed
+// age (a number)
+const cat2 = {
+  name: "Jam",
+  breed: "Siamese",
+  age: 45,
+};
+
+//   3. Combine Cats!
+// The cats are multiplying!
+
+// Write a function combineCatsthat has two parameters mama, and papa. The function will take two arguments -- each a cat object.
+
+// Pass cat1and cat2as arguments to the combineCatsfunction. The function should console.log them.
+function combineCats(mama, papa) {
+  return {
+    name: mama.name + papa.name,
+    age: 1,
+    breed: mama.breed + "-" + papa.breed,
+  };
+}
+console.log(combineCats(cat1, cat2));
